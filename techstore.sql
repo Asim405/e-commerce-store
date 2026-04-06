@@ -122,6 +122,15 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `image`, `category
 
 -- --------------------------------------------------------
 
+-- update the queries for photos which i integrated in the project
+UPDATE products SET image = 'assets/images/Premium Wireless He.jpg' WHERE name = 'Premium Wireless Headphones';
+UPDATE products SET image = 'assets/images/True Wireless Earbuds.jpg' WHERE name = 'True Wireless Earbuds';
+UPDATE products SET image = 'assets/images/Smart Watch Pro.jpg' WHERE name = 'Smart Watch Pro';
+UPDATE products SET image = 'assets/images/UltraBook Laptop.jpg' WHERE name = 'UltraBook Laptop';
+UPDATE products SET image = 'assets/images/Flagship Smartphone.jpg' WHERE name = 'Flagship Smartphone';
+UPDATE products SET image = 'assets/images/Professional Camera.jpg' WHERE name = 'Professional Camera';
+UPDATE products SET image = 'assets/images/Premium Tablet.jpg' WHERE name = 'Premium Tablet';
+UPDATE products SET image = 'assets/images/RGB Gaming Keyboard.jpg' WHERE name = 'RGB Gaming Keyboard';
 --
 -- Table structure for table `users`
 --
