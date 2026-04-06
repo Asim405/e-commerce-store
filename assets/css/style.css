@@ -387,3 +387,25 @@ body {
 @media (max-width: 480px) {
     .products-grid { grid-template-columns: 1fr; }
 }
+/* Category Filter */
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1.5px solid #ddd;
+    text-decoration: none;
+    color: #444;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+.filter-btn:hover, .filter-btn.active {
+    background: #6c63ff;
+    color: #fff;
+    border-color: #6c63ff;
+}

@@ -1,7 +1,7 @@
 <?php
 function getFeaturedProducts($pdo, $limit = 4) {
-    $stmt = $pdo->prepare("SELECT * FROM products WHERE featured = 1 LIMIT ?");
-    $stmt->execute([$limit]);
+    $stmt = $pdo->prepare("SELECT * FROM products WHERE featured = 1 LIMIT " . (int)$limit);
+    $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
