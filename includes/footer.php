@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-brand">
-            <span class="logo-icon">🟣</span> Store
+            <img src="assets/images/favicon2.png" alt="Store Logo" class="logo-img"><p>Tech Store</p>
             <p>Premium tech products at unbeatable prices.</p>
         </div>
         <div class="footer-links">

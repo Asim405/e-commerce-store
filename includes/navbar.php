@@ -4,7 +4,7 @@ $cart_count = isset($pdo) ? getCartCount($pdo, session_id()) : 0;
 <nav class="navbar">
     <div class="nav-container">
         <a href="index.php" class="nav-logo">
-            <span class="logo-icon">🟣</span> Store
+            <img src="assets/images/favicon2.png" alt="Store Logo" class="logo-img">
         </a>
         <ul class="nav-links">
             <li><a href="index.php">Home</a></li>
