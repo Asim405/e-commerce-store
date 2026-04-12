@@ -33,69 +33,73 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - TechStore</title>
+    <title>Sign Up - Tech Store</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon2.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-<?php include 'includes/navbar.php'; ?>
+    <?php include 'includes/navbar.php'; ?>
 
-<div class="auth-page">
-    <div class="auth-card">
-        <div style="margin-bottom:16px;">🟣 <strong>TechStore</strong></div>
-        <h2>Create your account</h2>
-        <p>Sign up to start shopping with us</p>
+    <div class="auth-page">
+        <div class="auth-card">
+            <div class="auth-logo"><img src="assets/images/favicon2.png" alt="Tech Store Logo"><strong>Tech Store</strong></div>
+            <h2>Create your account</h2>
+            <p>Sign up to start shopping with us</p>
 
-        <?php if($error): ?>
-            <div style="background:#ffe0e0;color:#c00;padding:10px;border-radius:8px;margin-bottom:16px;font-size:0.9rem;">
-                <?= $error ?>
-            </div>
-        <?php endif; ?>
-        <?php if($success): ?>
-            <div style="background:#e0ffe0;color:#080;padding:10px;border-radius:8px;margin-bottom:16px;font-size:0.9rem;">
-                <?= $success ?> <a href="signin.php">Sign in</a>
-            </div>
-        <?php endif; ?>
+            <?php if ($error): ?>
+                <div style="background:#ffe0e0;color:#c00;padding:10px;border-radius:8px;margin-bottom:16px;font-size:0.9rem;">
+                    <?= $error ?>
+                </div>
+            <?php endif; ?>
+            <?php if ($success): ?>
+                <div style="background:#e0ffe0;color:#080;padding:10px;border-radius:8px;margin-bottom:16px;font-size:0.9rem;">
+                    <?= $success ?> <a href="signin.php">Sign in</a>
+                </div>
+            <?php endif; ?>
 
-        <form method="POST">
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" name="full_name" placeholder="John Doe" required>
-            </div>
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" name="email" placeholder="you@example.com" required>
-            </div>
-            <div class="form-group">
-                <label>Phone Number (Optional)</label>
-                <input type="text" name="phone" placeholder="+92 300 1234567">
-            </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="••••••••" required>
-            </div>
-            <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" name="confirm_password" placeholder="••••••••" required>
-            </div>
-            <button type="submit" class="btn btn-dark btn-full">
-                <i class="fas fa-user-plus"></i> Create Account
-            </button>
-        </form>
+            <form method="POST">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="full_name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number (Optional)</label>
+                    <input type="text" name="phone" placeholder="+92 300 1234567">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" name="confirm_password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-dark btn-full">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+            </form>
 
-        <div class="auth-footer">
-            Already have an account? <a href="signin.php">Sign in</a>
-        </div>
-        <div class="back-home">
-            <a href="index.php">&larr; Back to Home</a>
+            <div class="auth-footer">
+                Already have an account? <a href="signin.php">Sign in</a>
+            </div>
+            <div class="back-home">
+                <a href="index.php">&larr; Back to Home</a>
+            </div>
         </div>
     </div>
-</div>
 
-<?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
 </body>
+
 </html>

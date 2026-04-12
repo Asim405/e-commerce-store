@@ -10,6 +10,7 @@
 
 body {
     font-family: 'DM Sans', sans-serif;
+    
     background: #fff;
     color: #222;
 }
@@ -30,6 +31,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.nav-container a p {
+    font-family: 'Playfair Display', serif;
+
+    margin-left: 8px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #222;
 }
 .nav-logo {
     font-size: 1.3rem;
@@ -273,6 +282,37 @@ body {
     max-width: 420px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
+.auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.auth-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.auth-logo strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #000000;
+    margin-bottom: 10px !important;
+}
+.auth-card strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    color: #000000;
+}
+.auth-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
 .auth-card h2 { font-size: 1.6rem; margin-bottom: 6px; }
 .auth-card p { color: #888; margin-bottom: 24px; font-size: 0.9rem; }
 .form-group { margin-bottom: 18px; }
@@ -289,7 +329,7 @@ body {
 .form-group input:focus { border-color: #ff981f; }
 .btn-full { width: 100%; text-align: center; padding: 13px; }
 .auth-footer { text-align: center; margin-top: 18px; font-size: 0.9rem; color: #888; }
-.auth-footer a { color: #ff981f; text-decoration: none; }
+.auth-footer a { color: rgb(252, 171, 79); text-decoration: none; }
 .back-home { text-align: center; margin-top: 12px; font-size: 0.85rem; }
 .back-home a { color: #888; text-decoration: none; }
 .divider { text-align: center; margin: 16px 0; color: #aaa; font-size: 0.85rem; }
@@ -394,10 +434,42 @@ body {
     .contact-cards { grid-template-columns: 1fr; }
     .hero-title { font-size: 2rem; }
     .nav-links { display: none; }
+    .auth-logo {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .auth-logo img {
+        width: 35px;
+        height: 35px;
+    }
+    .auth-logo strong {
+        font-size: 1.2rem;
+    }
+    .auth-card {
+        padding: 30px;
+    }
 }
 @media (max-width: 480px) {
     .products-grid { grid-template-columns: 1fr; }
 }
+
+/* ── PRODUCT DETAIL PAGE ── */
+.product-detail-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-detail-info {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    [style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 /* Category Filter */
 .category-filter {
     display: flex;

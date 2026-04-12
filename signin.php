@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - TechStore</title>
+    <title>Sign In - Tech Store</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="auth-page">
     <div class="auth-card">
-        <div style="margin-bottom:16px;">🟣 <strong>Store</strong></div>
+        <div class="auth-logo"><img src="assets/images/favicon2.png" alt="Tech Store Logo"><strong>Tech Store</strong></div>
         <h2>Sign in</h2>
         <p>Enter your credentials to access your account</p>
 
@@ -51,11 +51,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form method="POST">
             <div class="form-group">
                 <label>Email Address</label>
-                <input type="email" name="email" placeholder="you@example.com" required>
+                <input type="email" name="email" placeholder="" required>
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="password" name="password" placeholder="••••••••" required>
+                <input type="password" name="password" placeholder="" required>
             </div>
             <button type="submit" class="btn btn-dark btn-full">
                 <i class="fas fa-sign-in-alt"></i> Sign In

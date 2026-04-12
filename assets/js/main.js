@@ -1,9 +1,19 @@
 // Add to Cart
 function addToCart(productId) {
+    // Check if there's a quantity input on the page
+    const quantityInput = document.getElementById('quantity');
+    const quantity = quantityInput ? parseInt(quantityInput.value) : 1;
+    
+    let body = 'action=add&product_id=' + productId;
+    if (quantity > 1) {
+        // For multiple quantities, we need to add multiple items or handle in backend
+        body += '&quantity=' + quantity;
+    }
+    
     fetch('ajax/cart.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: 'action=add&product_id=' + productId
+        body: body
     })
     .then(res => res.json())
     .then(data => {

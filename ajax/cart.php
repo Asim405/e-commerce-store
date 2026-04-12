@@ -10,6 +10,8 @@ $session_id = session_id();
 
 if ($action === 'add') {
     $product_id = (int)$_POST['product_id'];
+    $quantity   = isset($_POST['quantity']) ? (int)$_POST['quantity'] : 1;
+    $quantity   = max(1, $quantity); // Ensure quantity is at least 1
 
     // Check if already in cart
     $stmt = $pdo->prepare("SELECT id, quantity FROM cart WHERE session_id = ? AND product_id = ?");
@@ -17,11 +19,11 @@ if ($action === 'add') {
     $existing = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($existing) {
-        $stmt = $pdo->prepare("UPDATE cart SET quantity = quantity + 1 WHERE id = ?");
-        $stmt->execute([$existing['id']]);
+        $stmt = $pdo->prepare("UPDATE cart SET quantity = quantity + ? WHERE id = ?");
+        $stmt->execute([$quantity, $existing['id']]);
     } else {
-        $stmt = $pdo->prepare("INSERT INTO cart (session_id, product_id, quantity) VALUES (?, ?, 1)");
-        $stmt->execute([$session_id, $product_id]);
+        $stmt = $pdo->prepare("INSERT INTO cart (session_id, product_id, quantity) VALUES (?, ?, ?)");
+        $stmt->execute([$session_id, $product_id, $quantity]);
     }
 
     echo json_encode([

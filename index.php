@@ -26,7 +26,7 @@ $featured_products = getFeaturedProducts($pdo, 4);
 <!-- Hero -->
 <section class="hero">
     <div class="hero-content">
-        <h1 class="hero-title">Welcome to Store</h1>
+        <h1 class="hero-title">Welcome to Tech Store</h1>
         <p class="hero-subtitle">
             Discover the latest tech products at unbeatable prices.<br>
             Premium quality, fast shipping, and exceptional customer service.
