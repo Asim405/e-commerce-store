@@ -18,7 +18,7 @@ if ($product_id > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $product ? htmlspecialchars($product['name']) . ' - Tech Store' : 'Product Not Found - Tech Store' ?></title>
+    <title><?= $product ? htmlspecialchars($product['name']) . ' - Gadget Hub' : 'Product Not Found - Gadget Hub' ?></title>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon2.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -88,29 +88,61 @@ if ($product_id > 0) {
 
                 <!-- Back Button -->
                 <a href="products.php" class="btn btn-outline" style="width: 100%; padding: 16px; text-align: center; font-size: 1.05rem; display: block;">
-                    ← Back to Products
+                     Back to Products
                 </a>
 
-                <!-- Product Info Grid -->
+                <!-- Gadget Specifications -->
                 <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee;">
-                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 20px;">Product Information</h3>
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 20px;">Gadget Specifications</h3>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <?php if (!empty($product['battery_life'])): ?>
                         <div>
-                            <p style="font-size: 0.9rem; color: #888; margin-bottom: 6px;">Category</p>
-                            <p style="font-weight: 600; font-size: 1rem;"><?= htmlspecialchars($product['category']) ?></p>
+                            <p style="font-size: 0.9rem; color: #272626; margin-bottom: 6px;">Battery Life</p>
+                            <p style="font-weight: 600; font-size: 1rem;"><?= htmlspecialchars($product['battery_life']) ?></p>
                         </div>
+                        <?php endif; ?>
+                        
+                        <?php if (!empty($product['warranty_years'])): ?>
                         <div>
-                            <p style="font-size: 0.9rem; color: #888; margin-bottom: 6px;">Rating</p>
-                            <p style="font-weight: 600; font-size: 1rem;"><?= number_format($product['rating'], 1) ?>/5</p>
+                            <p style="font-size: 0.9rem; color: #191818; margin-bottom: 6px;">Warranty :</p>
+                            <p style="font-weight: 600; font-size: 1rem;"><?= $product['warranty_years'] ?> Year(s)</p>
                         </div>
+                        <?php endif; ?>
+                        
+                        <?php if (!empty($product['storage'])): ?>
                         <div>
-                            <p style="font-size: 0.9rem; color: #888; margin-bottom: 6px;">Reviews</p>
-                            <p style="font-weight: 600; font-size: 1rem;"><?= number_format($product['reviews']) ?></p>
+                            <p style="font-size: 0.9rem; color: #888; margin-bottom: 6px;">Storage</p>
+                            <p style="font-weight: 600; font-size: 1rem;"><?= htmlspecialchars($product['storage']) ?></p>
                         </div>
+                        <?php endif; ?>
+                        
+                        <?php if (!empty($product['ram'])): ?>
                         <div>
-                            <p style="font-size: 0.9rem; color: #888; margin-bottom: 6px;">Product ID</p>
-                            <p style="font-weight: 600; font-size: 1rem;">#<?= $product['id'] ?></p>
+                            <p style="font-size: 0.9rem; color: #888; margin-bottom: 6px;">RAM</p>
+                            <p style="font-weight: 600; font-size: 1rem;"><?= htmlspecialchars($product['ram']) ?></p>
                         </div>
+                        <?php endif; ?>
+                        
+                        <?php if (!empty($product['processor'])): ?>
+                        <div>
+                            <p style="font-size: 0.9rem; color: #888; margin-bottom: 6px;">Processor</p>
+                            <p style="font-weight: 600; font-size: 1rem;"><?= htmlspecialchars($product['processor']) ?></p>
+                        </div>
+                        <?php endif; ?>
+                        
+                        <?php if (!empty($product['weight'])): ?>
+                        <div>
+                            <p style="font-size: 0.9rem; color: #888; margin-bottom: 6px;">Weight</p>
+                            <p style="font-weight: 600; font-size: 1rem;"><?= htmlspecialchars($product['weight']) ?></p>
+                        </div>
+                        <?php endif; ?>
+                        
+                        <?php if (!empty($product['os'])): ?>
+                        <div>
+                            <p style="font-size: 0.9rem; color: #888; margin-bottom: 6px;">Operating System</p>
+                            <p style="font-weight: 600; font-size: 1rem;"><?= htmlspecialchars($product['os']) ?></p>
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

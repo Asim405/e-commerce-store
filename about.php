@@ -9,8 +9,9 @@ require_once 'includes/functions.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Tech Store</title>
+    <title>About - Gadget Hub</title>
    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -20,7 +21,7 @@ require_once 'includes/functions.php';
 
     <div style="max-width:900px;margin:60px auto;padding:0 20px;text-align:center;">
         <h1 style="font-family:'Playfair Display',serif;font-size:2.5rem;color:#fcab4f;margin-bottom:16px;">
-            About Tech Store
+            About Gadget Hub
         </h1>
         <p style="color:#888;font-size:1.05rem;line-height:1.8;margin-bottom:50px;">
             We are a premium tech store offering the latest gadgets and electronics
@@ -64,6 +65,25 @@ require_once 'includes/functions.php';
     </div>
 
     <?php include 'includes/footer.php'; ?>
-</body>
+
+    <!-- Chatbot Toggle Button -->
+    <button id="chatbot-toggle" class="chatbot-toggle-btn" title="Chat with us">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <h3>TechStore Assistant</h3>
+            <button id="chatbot-close" class="chatbot-close-btn">×</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Type your message...">
+            <button id="chatbot-send" class="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="assets/js/chatbot.js"></script></body>
 
 </html>

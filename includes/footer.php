@@ -2,7 +2,7 @@
     <div class="footer-container">
         <div class="footer-brand">
             <img src="assets/images/favicon2.png" alt="Store Logo" class="logo-img">
-            <p>Tech Store</p>
+            <p> Gadget Hub</p>
             <p>Premium tech products at unbeatable prices.</p>
         </div>
         <div class="footer-links">
@@ -22,6 +22,6 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; <?= date('Y') ?> Tech Store. All rights reserved.</p>
+        <p>&copy; <?= date('Y') ?> Gadget Hub. All rights reserved.</p>
     </div>
 </footer>

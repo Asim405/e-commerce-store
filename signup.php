@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Tech Store</title>
+    <title>Sign Up - Gadget Hub</title>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon2.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="auth-page">
         <div class="auth-card">
-            <div class="auth-logo"><img src="assets/images/favicon2.png" alt="Tech Store Logo"><strong>Tech Store</strong></div>
+            <div class="auth-logo"><img src="assets/images/favicon2.png" alt="Gadget Hub Logo"><strong>Gadget Hub</strong></div>
             <h2>Create your account</h2>
             <p>Sign up to start shopping with us</p>
 
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form method="POST">
                 <div class="form-group">
                     <label>Full Name</label>
-                    <input type="text" name="full_name" placeholder="John Doe" required>
+                    <input type="text" name="full_name" placeholder="" required>
                 </div>
                 <div class="form-group">
                     <label>Email Address</label>
@@ -79,11 +79,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" name="password" placeholder="••••••••" required>
+                    <input type="password" name="password" placeholder="" required>
                 </div>
                 <div class="form-group">
                     <label>Confirm Password</label>
-                    <input type="password" name="confirm_password" placeholder="••••••••" required>
+                    <input type="password" name="confirm_password" placeholder="" required>
                 </div>
                 <button type="submit" class="btn btn-dark btn-full">
                     <i class="fas fa-user-plus"></i> Create Account

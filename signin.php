@@ -25,55 +25,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - Tech Store</title>
+    <title>Sign In - Gadget Hub</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-<?php include 'includes/navbar.php'; ?>
+    <?php include 'includes/navbar.php'; ?>
 
-<div class="auth-page">
-    <div class="auth-card">
-        <div class="auth-logo"><img src="assets/images/favicon2.png" alt="Tech Store Logo"><strong>Tech Store</strong></div>
-        <h2>Sign in</h2>
-        <p>Enter your credentials to access your account</p>
+    <div class="auth-page">
+        <div class="auth-card">
+            <div class="auth-logo"><img src="assets/images/favicon2.png" alt="Gadget Hub Logo"><strong>Gadget Hub</strong></div>
+            <h2>Sign in</h2>
+            <p>Enter your credentials to access your account</p>
 
-        <?php if($error): ?>
-            <div style="background:#ffe0e0;color:#c00;padding:10px;border-radius:8px;margin-bottom:16px;font-size:0.9rem;">
-                <?= $error ?>
+            <?php if ($error): ?>
+                <div style="background:#ffe0e0;color:#c00;padding:10px;border-radius:8px;margin-bottom:16px;font-size:0.9rem;">
+                    <?= $error ?>
+                </div>
+            <?php endif; ?>
+
+            <form method="POST">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="" required>
+                </div>
+                <button type="submit" class="btn btn-dark btn-full">
+                    <i class="fas fa-sign-in-alt"></i> Sign In
+                </button>
+            </form>
+
+            <div class="divider">OR</div>
+            <a href="index.php" class="btn-guest">Continue as Guest</a>
+
+            <div class="auth-footer">
+                Don't have an account? <a href="signup.php">Sign up</a>
             </div>
-        <?php endif; ?>
-
-        <form method="POST">
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" name="email" placeholder="" required>
+            <div class="back-home">
+                <a href="index.php">&larr; Back to Home</a>
             </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="" required>
-            </div>
-            <button type="submit" class="btn btn-dark btn-full">
-                <i class="fas fa-sign-in-alt"></i> Sign In
-            </button>
-        </form>
-
-        <div class="divider">OR</div>
-        <a href="index.php" class="btn-guest">Continue as Guest</a>
-
-        <div class="auth-footer">
-            Don't have an account? <a href="signup.php">Sign up</a>
-        </div>
-        <div class="back-home">
-            <a href="index.php">&larr; Back to Home</a>
         </div>
     </div>
-</div>
 
-<?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
 </body>
+
 </html>
